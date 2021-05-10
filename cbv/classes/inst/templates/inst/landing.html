@@ -1,0 +1,24 @@
+{% extends 'inst/base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Welcome to list of all schools </h1>
+  <div class="jumbotron">
+    <ol>
+      {% for school in schools %}
+
+      <h2><li> <a href="{% url 'inst:index_pk' pk=school.pk %}">{{ school.name }}</a></li></h2>
+
+      {% endfor %}
+    </ol>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+{% endblock %}

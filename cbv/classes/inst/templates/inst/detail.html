@@ -1,0 +1,37 @@
+{% extends 'inst/base.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Details of College</h1>
+    <h1>Name:  {{ school_detail.name }}</h1>
+    <h1>Principal:  {{ school_detail.Principal }}</h1>
+    <h1>Location:  {{ school_detail.location }}</h1>
+
+</div>
+
+
+<div class="jumbotron">
+  <h3>Students in our school </h3>
+
+      <ol>
+        {% for stud in school_detail.students.all  %}
+
+        <li><h1>{{stud.name }} is {{stud.age}} years old </h1></li>
+
+        <h1>There are no students yet!!</h1>
+
+        {% endfor %}
+      </ol>
+
+
+
+
+
+
+
+</div>
+
+
+
+{% endblock %}
